@@ -1,2 +1,4 @@
-# pickyapp.github.io
-Picky's official website
+# PickyappWebsite
+
+Welcome to Picky
+
