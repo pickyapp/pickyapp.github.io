@@ -1,4 +1,0 @@
-# PickyappWebsite
-
-Welcome to Picky
-
