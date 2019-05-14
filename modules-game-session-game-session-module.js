@@ -91,22 +91,17 @@ var GameSessionComponent = /** @class */ (function () {
         if (!this.sCurrGameSession.isGameSessionFree && !this.countdownStarted) { // i.e. game session just locked
             // TODO: maybe here we can stop the gs update polling?
             console.log("COUNTDOWN STARTED!");
-            try {
-                var waitTime_1 = (this.sCurrGameSession.startCountdownTime + 3000) - (new Date()).getTime();
-                console.log("Time to wait", waitTime_1 + "ms");
-                this.countdownStarted = true;
-                var s = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["interval"])(100).subscribe(function (e) {
-                    _this.countdownTimerTimeLeft = (waitTime_1 / 1000) - (e / 10); // UI
-                });
-                var timerSubs = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["timer"])(waitTime_1).subscribe(function (e) {
-                    s.unsubscribe();
-                    timerSubs.unsubscribe();
-                    _this.isGameView = true; // Starts the game
-                });
-            }
-            catch (e) {
-                console.log(e);
-            }
+            var waitTime_1 = (this.sCurrGameSession.startCountdownTime + 3000) - (new Date()).getTime();
+            console.log("Time to wait", waitTime_1 + "ms");
+            this.countdownStarted = true;
+            var s = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["interval"])(100).subscribe(function (e) {
+                _this.countdownTimerTimeLeft = (waitTime_1 / 1000) - (e / 10); // UI
+            });
+            var timerSubs = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["timer"])(waitTime_1).subscribe(function (e) {
+                s.unsubscribe();
+                timerSubs.unsubscribe();
+                _this.isGameView = true; // Starts the game
+            });
         }
     };
     GameSessionComponent.prototype.updateFromCookieSession = function () {
@@ -212,15 +207,16 @@ var InGameComponent = /** @class */ (function () {
         this.cookieService = cookieService;
         this.gsService = gsService;
         this.utilityService = utilityService;
-        this.QUESTION_VIEW_TIME = 45000;
+        this.QUESTION_VIEW_TIME = 2000;
         this.QUESTION_TIMER_TYPE = "question_timer";
-        this.ANSWER_VIEW_TIME = 45000;
+        this.ANSWER_VIEW_TIME = 2000;
         this.ANSWER_TIMER_TYPE = "answer_timer";
         this.TOTAL_ROUNDS = 5;
         this.isShowingAnswers = false;
         this.setBuddyNameFromCookie();
         this.round = 0;
         this.currOptionSelected = 1;
+        console.log("constructor");
     }
     InGameComponent.prototype.ngOnInit = function () { this.isShowingAnswers = false; };
     InGameComponent.prototype.ngAfterViewInit = function () { this.startRound(); };
@@ -237,6 +233,7 @@ var InGameComponent = /** @class */ (function () {
             _this.round++;
             _this.currQuestion = _this.getQuestionFromCookie(true);
             _this.currTimerType = _this.QUESTION_TIMER_TYPE;
+            console.log("starting round");
             _this.startTimer(_this.QUESTION_VIEW_TIME, _this.currTimerType);
         });
     };
@@ -262,6 +259,7 @@ var InGameComponent = /** @class */ (function () {
         return question;
     };
     InGameComponent.prototype.onTimerFinished = function (timerType) {
+        console.log("Timer finished!");
         if (timerType === this.QUESTION_TIMER_TYPE) {
             this.onQuestionTimerFinished();
             return;
