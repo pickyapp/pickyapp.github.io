@@ -207,9 +207,9 @@ var InGameComponent = /** @class */ (function () {
         this.cookieService = cookieService;
         this.gsService = gsService;
         this.utilityService = utilityService;
-        this.QUESTION_VIEW_TIME = 2000;
+        this.QUESTION_VIEW_TIME = 45000;
         this.QUESTION_TIMER_TYPE = "question_timer";
-        this.ANSWER_VIEW_TIME = 2000;
+        this.ANSWER_VIEW_TIME = 45000;
         this.ANSWER_TIMER_TYPE = "answer_timer";
         this.TOTAL_ROUNDS = 5;
         this.isShowingAnswers = false;
@@ -219,7 +219,6 @@ var InGameComponent = /** @class */ (function () {
     }
     InGameComponent.prototype.ngOnInit = function () { this.isShowingAnswers = false; };
     InGameComponent.prototype.ngAfterViewInit = function () {
-        console.log("ngAfterViewInit!");
         this.startRound();
     };
     InGameComponent.prototype.setAnswerAs = function (i) {
@@ -229,14 +228,12 @@ var InGameComponent = /** @class */ (function () {
     };
     InGameComponent.prototype.startRound = function () {
         var _this = this;
-        console.log("Starting round 1.");
         this.gsService.getQuestion()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (resp) { return resp.body.message === "success"; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["take"])(1)).subscribe(function (resp) {
             _this.isShowingAnswers = false;
             _this.round++;
             _this.currQuestion = _this.getQuestionFromCookie(true);
             _this.currTimerType = _this.QUESTION_TIMER_TYPE;
-            console.log("starting round");
             _this.startTimer(_this.QUESTION_VIEW_TIME, _this.currTimerType);
         });
     };

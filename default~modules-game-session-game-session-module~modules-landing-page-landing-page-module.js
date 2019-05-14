@@ -477,7 +477,6 @@ var TimerComponent = /** @class */ (function () {
     };
     TimerComponent.prototype.startTimer = function () {
         var _this = this;
-        console.log("Inside Timer: starting timer!");
         this.isTimerStopped = false;
         var timer = this.getTimer(this.totalWaitTime);
         this.iSub = timer.myInterval.subscribe(function (currTimeLeft) {
