@@ -514,10 +514,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var UserService = /** @class */ (function () {
     function UserService(httpClient) {
         this.httpClient = httpClient;
+        this.hostUrl = 'https://api.piky.me';
     }
     UserService.prototype.setUsername = function (username, gameSession) {
         // FIXME: fix getting empty gameSession string
-        var mkUserObs = this.httpClient.post("http://localhost:9000/game-sessions/" + gameSession + "/add-user", {
+        var mkUserObs = this.httpClient.post(this.hostUrl + "/game-sessions/" + gameSession + "/add-user", {
             username: username
         }, {
             observe: 'response',
