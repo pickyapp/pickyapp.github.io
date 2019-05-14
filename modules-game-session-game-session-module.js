@@ -216,10 +216,12 @@ var InGameComponent = /** @class */ (function () {
         this.setBuddyNameFromCookie();
         this.round = 0;
         this.currOptionSelected = 1;
-        console.log("constructor");
     }
     InGameComponent.prototype.ngOnInit = function () { this.isShowingAnswers = false; };
-    InGameComponent.prototype.ngAfterViewInit = function () { this.startRound(); };
+    InGameComponent.prototype.ngAfterViewInit = function () {
+        console.log("ngAfterViewInit!");
+        this.startRound();
+    };
     InGameComponent.prototype.setAnswerAs = function (i) {
         this.currOptionSelected = i;
         if (!this.isShowingAnswers)
@@ -227,6 +229,7 @@ var InGameComponent = /** @class */ (function () {
     };
     InGameComponent.prototype.startRound = function () {
         var _this = this;
+        console.log("Starting round 1.");
         this.gsService.getQuestion()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (resp) { return resp.body.message === "success"; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["take"])(1)).subscribe(function (resp) {
             _this.isShowingAnswers = false;
