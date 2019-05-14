@@ -91,17 +91,22 @@ var GameSessionComponent = /** @class */ (function () {
         if (!this.sCurrGameSession.isGameSessionFree && !this.countdownStarted) { // i.e. game session just locked
             // TODO: maybe here we can stop the gs update polling?
             console.log("COUNTDOWN STARTED!");
-            var waitTime_1 = (this.sCurrGameSession.startCountdownTime + 3000) - (new Date()).getTime();
-            console.log("Time to wait", waitTime_1 + "ms");
-            this.countdownStarted = true;
-            var s = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["interval"])(100).subscribe(function (e) {
-                _this.countdownTimerTimeLeft = (waitTime_1 / 1000) - (e / 10); // UI
-            });
-            var timerSubs = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["timer"])(waitTime_1).subscribe(function (e) {
-                s.unsubscribe();
-                timerSubs.unsubscribe();
-                _this.isGameView = true; // Starts the game
-            });
+            try {
+                var waitTime_1 = (this.sCurrGameSession.startCountdownTime + 3000) - (new Date()).getTime();
+                console.log("Time to wait", waitTime_1 + "ms");
+                this.countdownStarted = true;
+                var s = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["interval"])(100).subscribe(function (e) {
+                    _this.countdownTimerTimeLeft = (waitTime_1 / 1000) - (e / 10); // UI
+                });
+                var timerSubs = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["timer"])(waitTime_1).subscribe(function (e) {
+                    s.unsubscribe();
+                    timerSubs.unsubscribe();
+                    _this.isGameView = true; // Starts the game
+                });
+            }
+            catch (e) {
+                console.log(e);
+            }
         }
     };
     GameSessionComponent.prototype.updateFromCookieSession = function () {
