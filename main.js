@@ -207,7 +207,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var GameSessionService = /** @class */ (function () {
     function GameSessionService(http) {
         this.http = http;
-        this.hostUrl = 'http://pickystaging.herokuapp.com';
+        this.hostUrl = 'https://api.piky.me';
         this.httpOptions = {
             observe: 'response',
             withCredentials: true // Required for CORS
