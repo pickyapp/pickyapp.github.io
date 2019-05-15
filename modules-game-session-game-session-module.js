@@ -156,7 +156,7 @@ var GameSessionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mh3\">\n  <h1 class=\"white\">Round: {{ round }} of 5</h1>\n  <h1>{{ typeString === \"QUESTION\" ? typeString : \"\" }}</h1>\n  <div class=\"mb4\">\n    <h3 class=\"f3 white\">{{ currQuestion ? currQuestion.question.questionText : \"\" }}</h3>\n  </div>\n  <div *ngIf=\"currQuestion\">\n    <div *ngIf=\"!isShowingAnswers\">\n      <div class=\"mv4\" *ngFor=\"let option of currQuestion.question.options; index as i\">\n          <option-button\n                [text]=\"option.optionText\"\n                (didClick)=\"setAnswerAs(i)\"\n                [isDisabled]=\"isShowingAnswers\"></option-button>\n      </div>\n    </div>\n    <div *ngIf=\"isShowingAnswers\">\n        <h1>{{ typeString }}</h1>\n        <div class=\"mv5\">\n            <option-button\n                  [text]=\"currQuestion.question.options[currOptionSelected].optionText\"\n                  [isDisabled]=\"true\"></option-button>\n        </div>\n    </div>\n  </div>\n  <div class=\"mt4\" >\n      <timer #gameTimer [time]=\"5000\" (onTimerFinished)=\"onTimerFinished($event)\" ></timer>\n  </div>\n  <div class=\"mt4\">\n    <click-button *ngIf=\"isShowingAnswers\" [text]=\"'Next'\" (click)=\"onNext()\"></click-button>\n  </div>\n</div>\n"
+module.exports = "<div class=\"mh3\">\n  <h1 class=\"white\">Round: {{ round }} of 5</h1>\n  <h1>{{ typeString === \"QUESTION\" ? typeString : \"\" }}</h1>\n  <div class=\"mb4\">\n    <h3 class=\"f3 white\">{{ currQuestion ? currQuestion.question.questionText : \"\" }}</h3>\n  </div>\n  <div *ngIf=\"currQuestion\">\n    <div *ngIf=\"!isShowingAnswers\">\n      <div class=\"mv4\" *ngFor=\"let option of currQuestion.question.options; index as i\">\n          <option-button\n                [text]=\"option.optionText\"\n                (didClick)=\"setAnswerAs(i)\"\n                [isDisabled]=\"canClickAnswers\"></option-button>\n      </div>\n    </div>\n    <div *ngIf=\"isShowingAnswers\">\n        <h1>{{ typeString }}</h1>\n        <div class=\"mv5\">\n            <option-button\n                  [text]=\"currQuestion.question.options[currOptionSelected].optionText\"\n                  [isDisabled]=\"true\"></option-button>\n        </div>\n    </div>\n  </div>\n  <div class=\"mt4\" >\n      <timer #gameTimer [time]=\"5000\" (onTimerFinished)=\"onTimerFinished($event)\" ></timer>\n  </div>\n  <div class=\"mt4\">\n    <click-button *ngIf=\"isShowingAnswers\" [text]=\"'Next'\" (click)=\"onNext()\"></click-button>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -207,9 +207,9 @@ var InGameComponent = /** @class */ (function () {
         this.cookieService = cookieService;
         this.gsService = gsService;
         this.utilityService = utilityService;
-        this.QUESTION_VIEW_TIME = 450000;
+        this.QUESTION_VIEW_TIME = 45000;
         this.QUESTION_TIMER_TYPE = "question_timer";
-        this.ANSWER_VIEW_TIME = 450000;
+        this.ANSWER_VIEW_TIME = 45000;
         this.ANSWER_TIMER_TYPE = "answer_timer";
         this.TOTAL_ROUNDS = 5;
         this.buddyName = "Himani";
@@ -227,8 +227,10 @@ var InGameComponent = /** @class */ (function () {
     };
     InGameComponent.prototype.setAnswerAs = function (i) {
         this.currOptionSelected = i;
-        if (!this.isShowingAnswers)
+        if (!this.isShowingAnswers) {
+            this.canClickAnswers = false;
             this.onNext();
+        }
     };
     InGameComponent.prototype.startRound = function () {
         var _this = this;
@@ -236,6 +238,7 @@ var InGameComponent = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (resp) { return resp.body.message === "success"; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["take"])(1)).subscribe(function (resp) {
             s.unsubscribe();
             _this.isShowingAnswers = false;
+            _this.canClickAnswers = true;
             _this.round++;
             _this.currQuestion = _this.getQuestionFromCookie(true);
             _this.typeString = "QUESTION";
