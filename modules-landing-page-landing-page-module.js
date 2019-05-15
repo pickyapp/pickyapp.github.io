@@ -161,7 +161,7 @@ var EducationStepComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"flex flex-column flex-row-ns justify-between pt4 ph4\">\n  <anchor [text]=\"'About Us'\"></anchor>\n  <div class=\"flex flex-column tr-ns\">\n    <p class=\"mv0-ns\"><b>Disclaimer: </b>All content and interactions are for light fun and entertainment. </p>\n    <p>© 2019 Piky</p>\n  </div>\n</div>\n"
+module.exports = "\n<div class=\"flex flex-column flex-row-ns justify-between pt4 ph4\">\n  <anchor [text]=\"'About Us'\"></anchor>\n  <div class=\"flex flex-column tr-ns\">\n    <p class=\"mv0-ns\"><b>Disclaimer: </b>All content and interactions are for light fun and entertainment. </p>\n    <p>© 2019 Vinit Soni</p>\n  </div>\n</div>\n"
 
 /***/ }),
 
