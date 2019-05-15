@@ -18,7 +18,7 @@ module.exports = "<div *ngIf=\"!isGameView\">\n  <section class=\"w-70 center pt
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  font-family: 'Roboto', sans-serif; }\n:host {\n  background-color: #009688;\n  display: inline-block;\n  width: 100%;\n  height: 72rem; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3Zpbml0L3NpZGUvcGlja3ktbXZwMS9zcmMvc3R5bGVzLnNjc3MiLCIvaG9tZS92aW5pdC9zaWRlL3BpY2t5LW12cDEvc3JjL2FwcC9tb2R1bGVzL2dhbWUtc2Vzc2lvbi9jb21wb25lbnRzL2dhbWUtc2Vzc2lvbi9nYW1lLXNlc3Npb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsK0VBQStFO0FBUy9FO0VBQ0Usa0NBQWlDLEVBQ2xDO0FDVEQ7RUFDRSwwQkRDb0I7RUNBcEIsc0JBQXFCO0VBQ3JCLFlBQVc7RUFDWCxjQUFhLEVBQ2QiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2dhbWUtc2Vzc2lvbi9jb21wb25lbnRzL2dhbWUtc2Vzc2lvbi9nYW1lLXNlc3Npb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBZb3UgY2FuIGFkZCBnbG9iYWwgc3R5bGVzIHRvIHRoaXMgZmlsZSwgYW5kIGFsc28gaW1wb3J0IG90aGVyIHN0eWxlIGZpbGVzICovXG5cblxuJGNvbG9yV2hpdGU6ICNmZmY7XG4kcHJpbWFyeUNvbG9yOiAjMDA5Njg4O1xuJHByaW1hcnlMaWdodENvbG9yOiAjNTJjN2I4O1xuJHByaW1hcnlEYXJrQ29sb3I6ICMwMDY3NWI7XG5cblxuYm9keSB7XG4gIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbn1cbiIsIkBpbXBvcnQgJy4uLy4uLy4uLy4uLy4uL3N0eWxlcy5zY3NzJztcblxuOmhvc3Qge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAkcHJpbWFyeUNvbG9yO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDcycmVtO1xufVxuIl19 */"
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  font-family: 'Roboto', sans-serif; }\n:host {\n  background-color: #009688;\n  display: inline-block;\n  width: 100%;\n  height: 72rem; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92aW5pdHNvbmkvbWFpbi9waWNreS1tdnAxL3NyYy9zdHlsZXMuc2NzcyIsIi9Vc2Vycy92aW5pdHNvbmkvbWFpbi9waWNreS1tdnAxL3NyYy9hcHAvbW9kdWxlcy9nYW1lLXNlc3Npb24vY29tcG9uZW50cy9nYW1lLXNlc3Npb24vZ2FtZS1zZXNzaW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLCtFQUErRTtBQVMvRTtFQUNFLGtDQUFpQyxFQUNsQztBQ1REO0VBQ0UsMEJEQ29CO0VDQXBCLHNCQUFxQjtFQUNyQixZQUFXO0VBQ1gsY0FBYSxFQUNkIiwiZmlsZSI6InNyYy9hcHAvbW9kdWxlcy9nYW1lLXNlc3Npb24vY29tcG9uZW50cy9nYW1lLXNlc3Npb24vZ2FtZS1zZXNzaW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuXG5cbiRjb2xvcldoaXRlOiAjZmZmO1xuJHByaW1hcnlDb2xvcjogIzAwOTY4ODtcbiRwcmltYXJ5TGlnaHRDb2xvcjogIzUyYzdiODtcbiRwcmltYXJ5RGFya0NvbG9yOiAjMDA2NzViO1xuXG5cbmJvZHkge1xuICBmb250LWZhbWlseTogJ1JvYm90bycsIHNhbnMtc2VyaWY7XG59XG4iLCJAaW1wb3J0ICcuLi8uLi8uLi8uLi8uLi9zdHlsZXMuc2Nzcyc7XG5cbjpob3N0IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogJHByaW1hcnlDb2xvcjtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiA3MnJlbTtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -72,7 +72,7 @@ var GameSessionComponent = /** @class */ (function () {
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(function (params) { return _this.gsService.makeSession(params["gameSessionName"]); })).subscribe(function (resp) {
             _this.updateFromCookieSession();
             if (!_this.sCurrGameSession.isGameSessionFree) {
-                _this.router.navigate(['in-progress'], { relativeTo: _this.route });
+                _this.router.navigate(['in-progress'], { relativeTo: _this.route }); // temporary
             }
         });
         this.pollSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["interval"])(1000).pipe(// Polling for updates
@@ -156,7 +156,7 @@ var GameSessionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "YOU'RE IN GAME!\n<h1>Round: {{ round }}, {{ quesAnsString }}</h1>\n<h1>{{ this.isShowingAnswers ? \"ANSWER\" : \"QUESTION\"}}</h1>\n<h1>{{ currQuestion ? currQuestion.answerer : \"\" }}</h1>\n<h2>{{ currQuestion ? currQuestion.question.questionText : \"\" }}</h2>\n<div *ngIf=\"currQuestion\">\n  <div *ngFor=\"let option of currQuestion.question.options; index as i\">\n      <input [(ngModel)]=\"currOptionSelected\"\n            type=\"radio\"\n            [value]=\"i\"\n            (id)=\"i\"\n            (click)=\"setAnswerAs(i)\"\n            name=\"options\"\n            [disabled]=\"isShowingAnswers\">\n      <label (for)=\"i\">{{ currQuestion.question.options[i].optionText }}</label>\n      {{ currOptionSelected }}\n  </div>\n</div>\n<button *ngIf=\"isShowingAnswers\" (click)=\"onNext()\">next</button>\n<button (click)=\"showCookieValue('user')\">COOKIE</button>\n<button (click)=\"setStopTimerTrue()\">STOP</button>\n<timer #gameTimer [time]=\"5000\" (onTimerFinished)=\"onTimerFinished($event)\" ></timer>\n"
+module.exports = "<div class=\"mh3\">\n  <h1 class=\"white\">Round: {{ round }} of 5</h1>\n  <h1>{{ typeString === \"QUESTION\" ? typeString : \"\" }}</h1>\n  <div class=\"mb4\">\n    <h3 class=\"f3 white\">{{ currQuestion ? currQuestion.question.questionText : \"\" }}</h3>\n  </div>\n  <div *ngIf=\"currQuestion\">\n    <div *ngIf=\"!isShowingAnswers\">\n      <div class=\"mv4\" *ngFor=\"let option of currQuestion.question.options; index as i\">\n          <option-button\n                [text]=\"option.optionText\"\n                (click)=\"setAnswerAs(i)\"\n                [isDisabled]=\"isShowingAnswers\"></option-button>\n      </div>\n    </div>\n    <div *ngIf=\"isShowingAnswers\">\n        <h1>{{ typeString }}</h1>\n        <div class=\"mv5\">\n            <option-button\n                  [text]=\"currQuestion.question.options[currOptionSelected].optionText\"\n                  (click)=\"setAnswerAs(i)\"\n                  [isDisabled]=\"true\"></option-button>\n        </div>\n    </div>\n  </div>\n  <div class=\"mt4\" >\n      <timer #gameTimer [time]=\"5000\" (onTimerFinished)=\"onTimerFinished($event)\" ></timer>\n  </div>\n  <div class=\"mt4\">\n    <click-button *ngIf=\"isShowingAnswers\" [text]=\"'Next'\" (click)=\"onNext()\"></click-button>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -207,17 +207,21 @@ var InGameComponent = /** @class */ (function () {
         this.cookieService = cookieService;
         this.gsService = gsService;
         this.utilityService = utilityService;
-        this.QUESTION_VIEW_TIME = 45000;
+        this.QUESTION_VIEW_TIME = 450000;
         this.QUESTION_TIMER_TYPE = "question_timer";
-        this.ANSWER_VIEW_TIME = 45000;
+        this.ANSWER_VIEW_TIME = 450000;
         this.ANSWER_TIMER_TYPE = "answer_timer";
         this.TOTAL_ROUNDS = 5;
+        this.buddyName = "Himani";
         this.isShowingAnswers = false;
         this.setBuddyNameFromCookie();
         this.round = 0;
         this.currOptionSelected = 1;
     }
-    InGameComponent.prototype.ngOnInit = function () { this.isShowingAnswers = false; };
+    InGameComponent.prototype.ngOnInit = function () {
+        this.typeString = "QUESTION";
+        this.isShowingAnswers = false;
+    };
     InGameComponent.prototype.ngAfterViewInit = function () {
         this.startRound();
     };
@@ -228,11 +232,13 @@ var InGameComponent = /** @class */ (function () {
     };
     InGameComponent.prototype.startRound = function () {
         var _this = this;
-        this.gsService.getQuestion()
+        var s = this.gsService.getQuestion()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (resp) { return resp.body.message === "success"; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["take"])(1)).subscribe(function (resp) {
+            s.unsubscribe();
             _this.isShowingAnswers = false;
             _this.round++;
             _this.currQuestion = _this.getQuestionFromCookie(true);
+            _this.typeString = "QUESTION";
             _this.currTimerType = _this.QUESTION_TIMER_TYPE;
             _this.startTimer(_this.QUESTION_VIEW_TIME, _this.currTimerType);
         });
@@ -259,7 +265,6 @@ var InGameComponent = /** @class */ (function () {
         return question;
     };
     InGameComponent.prototype.onTimerFinished = function (timerType) {
-        console.log("Timer finished!");
         if (timerType === this.QUESTION_TIMER_TYPE) {
             this.onQuestionTimerFinished();
             return;
@@ -281,6 +286,7 @@ var InGameComponent = /** @class */ (function () {
     InGameComponent.prototype.onAnswerReceived = function (resp) {
         this.isShowingAnswers = true;
         var ques = this.getQuestionFromCookie(false);
+        this.typeString = this.buddyName + " says:";
         this.setAnswerAs(ques.answer);
         this.currQuestion = ques;
         this.currTimerType = this.ANSWER_TIMER_TYPE;
@@ -517,11 +523,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var UserService = /** @class */ (function () {
     function UserService(httpClient) {
         this.httpClient = httpClient;
-        this.hostUrl = 'https://api.piky.me';
     }
     UserService.prototype.setUsername = function (username, gameSession) {
         // FIXME: fix getting empty gameSession string
-        var mkUserObs = this.httpClient.post(this.hostUrl + "/game-sessions/" + gameSession + "/add-user", {
+        var mkUserObs = this.httpClient.post("https://api.piky.me/game-sessions/" + gameSession + "/add-user", {
             username: username
         }, {
             observe: 'response',

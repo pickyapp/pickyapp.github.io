@@ -137,7 +137,7 @@ module.exports = "<router-outlet></router-outlet>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".base-component {\n  background: #52c7b8;\n  height: 1000px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3Zpbml0L3NpZGUvcGlja3ktbXZwMS9zcmMvYXBwL2NvbXBvbmVudHMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFLG9CQUFtQjtFQUNuQixlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcblxuLmJhc2UtY29tcG9uZW50IHtcbiAgYmFja2dyb3VuZDogIzUyYzdiODtcbiAgaGVpZ2h0OiAxMDAwcHg7XG59Il19 */"
+module.exports = ".base-component {\n  background: #52c7b8;\n  height: 1000px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92aW5pdHNvbmkvbWFpbi9waWNreS1tdnAxL3NyYy9hcHAvY29tcG9uZW50cy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0Usb0JBQW1CO0VBQ25CLGVBQWMsRUFDZiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG4uYmFzZS1jb21wb25lbnQge1xuICBiYWNrZ3JvdW5kOiAjNTJjN2I4O1xuICBoZWlnaHQ6IDEwMDBweDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -303,7 +303,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/vinit/side/picky-mvp1/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/vinitsoni/main/picky-mvp1/src/main.ts */"./src/main.ts");
 
 
 /***/ })
