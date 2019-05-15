@@ -161,7 +161,7 @@ var EducationStepComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"flex flex-column flex-row-ns justify-between pt4 ph4\">\n  <anchor [text]=\"'About Us'\"></anchor>\n  <div class=\"flex flex-column tr-ns\">\n    <p class=\"mv0-ns\"><b>Disclaimer: </b>All content and interactions are for light fun and entertainment. </p>\n    <p>© 2018 Picky</p>\n  </div>\n</div>\n"
+module.exports = "\n<div class=\"flex flex-column flex-row-ns justify-between pt4 ph4\">\n  <anchor [text]=\"'About Us'\"></anchor>\n  <div class=\"flex flex-column tr-ns\">\n    <p class=\"mv0-ns\"><b>Disclaimer: </b>All content and interactions are for light fun and entertainment. </p>\n    <p>© 2019 Piky</p>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -218,7 +218,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex flex-column\">\n  <div class=\"flex flex-row mv4 mt5-ns justify-center\">\n      <header1 class=\"b\" [headerText]=\"'Picky'\" ></header1>\n      <header1 [headerText]=\"'&nbsp;— Get to know your friends'\" ></header1>\n  </div>\n\n  <div class=\"mv5\">\n    <div class=\"w-100 flex flex-row justify-center mv3\">\n      <header2 [headerText]=\"'picky.me/g/'\"></header2>\n      <textfield class=\"w5-ns w-50 f3-ns f5\" [textValue]=\"sessionName\" (textValueChange)=\"onSessionNameUpdate($event)\" [placeholderText]=\"'the-cool-fham'\"></textfield>\n    </div>\n    <div class=\"flex flex-row justify-center mv3-ns mv2\">\n      <click-button class=\"w-80 mh3\" clickListener (atclick)=\"setGameSessionAndUpdateRoute()\" [text]=\"'start'\"></click-button>\n    </div>\n  </div>\n\n  <div class=\"flex flex-row-l flex-column mh4-ns mh3 mt5 mb4 justify-between-ns items-center\">\n    <education-step [stepNumber]=\"1\" [text]=\"'Set your unique session name & click start'\"></education-step>\n    <education-step [stepNumber]=\"2\" [text]=\"step2Text\"></education-step>\n    <education-step [stepNumber]=\"3\" [text]=\"'Enter your names into the session and start playing!'\"></education-step>\n  </div>\n  <footer></footer>\n</div>\n\n"
+module.exports = "<div class=\"flex flex-column pt2\">\n  <div class=\"flex flex-row mt5 mb4 mt5-ns justify-center\">\n      <header2 class=\"fw1\" [headerText]=\"'Time to be&nbsp;'\" ></header2>\n      <header2 class=\"b underline\" [headerText]=\"'Piky!'\" ></header2>\n  </div>\n\n  <div class=\"mt3 mb3\">\n    <div class=\"w-100 justify-center mv2\">\n      <div class=\"w-100 mb4 flex flex-row justify-center\">\n        <textfield class=\"w5-ns w-90 mh0-ns mh2 f3-ns f2\" [textValue]=\"sessionName\" (textValueChange)=\"onSessionNameUpdate($event)\" [placeholderText]=\"'game123'\"></textfield>\n      </div>\n      <div class=\"mt4 flex flex-row justify-center\">\n        <click-button class=\"w-80 mw-50 mh3 f2\" (didClick)=\"setGameSessionAndUpdateRoute()\" [text]=\"'start'\"></click-button>\n      </div>\n    </div>\n  </div>\n\n  <header3 class=\"mh3 ph3 mt3 tc mt5-ns\" [headerText]=\"'How to play:'\"></header3>\n  <div class=\"flex flex-row-l flex-column mh4-ns mh3 mt3 mb4 justify-center-ns items-center\">\n    <education-step [stepNumber]=\"1\" [text]=\"'Answer a question about your friend'\"></education-step>\n    <education-step [stepNumber]=\"2\" [text]=\"'See their answer about you!'\"></education-step>\n  </div>\n  <footer></footer>\n</div>\n\n"
 
 /***/ }),
 

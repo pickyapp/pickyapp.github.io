@@ -71,7 +71,7 @@ var AnchorComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<button\n  [class]=\"isDisabled ? 'bg-moon-gray' : ''\"\n  (click)=\"didClickButton()\"\n  [disabled]=\"isDisabled\">{{ buttonText }}</button>\n"
+module.exports = "<button\n  (click)=\"didClickButton()\"\n  [ngStyle]=\"{\n    'background-color': isDisabled ? '#a4a4a4' : bgColour,\n    'box-shadow': boxShadow\n  }\"\n  [disabled]=\"isDisabled\">{{ buttonText }}</button>\n"
 
 /***/ }),
 
@@ -82,7 +82,7 @@ module.exports = "<button\n  [class]=\"isDisabled ? 'bg-moon-gray' : ''\"\n  (cl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  font-family: 'Roboto', sans-serif; }\n:host button {\n  width: 100%;\n  background-color: #00675b;\n  border: none;\n  font-size: 1.2rem;\n  color: #fff;\n  border-radius: 2rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  box-shadow: 0.03rem 0.03rem 1px black; }\n:host button:hover {\n  cursor: pointer; }\n:host button:active {\n  box-shadow: none; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3Zpbml0L3NpZGUvcGlja3ktbXZwMS9zcmMvc3R5bGVzLnNjc3MiLCIvaG9tZS92aW5pdC9zaWRlL3BpY2t5LW12cDEvc3JjL2FwcC9tb2R1bGVzL3VpL2NsaWNrLWJ1dHRvbi9jbGljay1idXR0b24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsK0VBQStFO0FBUy9FO0VBQ0Usa0NBQWlDLEVBQ2xDO0FDVEQ7RUFFSSxZQUFXO0VBQ1gsMEJEQ3NCO0VDQXRCLGFBQVk7RUFDWixrQkFBaUI7RUFDakIsWURMYTtFQ01iLG9CQUFtQjtFQUNuQixtQkFBa0I7RUFDbEIsb0JBQW1CO0VBQ25CLGlCQUFnQjtFQUNoQixvQkFBbUI7RUFDbkIsc0NBQXFDLEVBQ3RDO0FBYkg7RUFlSSxnQkFBZSxFQUNoQjtBQWhCSDtFQWtCSSxpQkFBZ0IsRUFDakIiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3VpL2NsaWNrLWJ1dHRvbi9jbGljay1idXR0b24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBZb3UgY2FuIGFkZCBnbG9iYWwgc3R5bGVzIHRvIHRoaXMgZmlsZSwgYW5kIGFsc28gaW1wb3J0IG90aGVyIHN0eWxlIGZpbGVzICovXG5cblxuJGNvbG9yV2hpdGU6ICNmZmY7XG4kcHJpbWFyeUNvbG9yOiAjMDA5Njg4O1xuJHByaW1hcnlMaWdodENvbG9yOiAjNTJjN2I4O1xuJHByaW1hcnlEYXJrQ29sb3I6ICMwMDY3NWI7XG5cblxuYm9keSB7XG4gIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbn1cbiIsIkBpbXBvcnQgXCIuLi8uLi8uLi8uLi9zdHlsZXMuc2Nzc1wiO1xuXG46aG9zdCB7XG4gIGJ1dHRvbiB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJHByaW1hcnlEYXJrQ29sb3I7XG4gICAgYm9yZGVyOiBub25lO1xuICAgIGZvbnQtc2l6ZTogMS4ycmVtO1xuICAgIGNvbG9yOiAkY29sb3JXaGl0ZTtcbiAgICBib3JkZXItcmFkaXVzOiAycmVtO1xuICAgIHBhZGRpbmctbGVmdDogMXJlbTtcbiAgICBwYWRkaW5nLXJpZ2h0OiAxcmVtO1xuICAgIHBhZGRpbmctdG9wOiA1cHg7XG4gICAgcGFkZGluZy1ib3R0b206IDVweDtcbiAgICBib3gtc2hhZG93OiAwLjAzcmVtIDAuMDNyZW0gMXB4IGJsYWNrO1xuICB9XG4gIGJ1dHRvbjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICB9XG4gIGJ1dHRvbjphY3RpdmUge1xuICAgIGJveC1zaGFkb3c6IG5vbmU7XG4gIH1cbn1cbiJdfQ== */"
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  font-family: 'Roboto', sans-serif; }\n:host button {\n  width: 100%;\n  border: none;\n  font-size: 2.0rem;\n  color: #fff;\n  border-radius: 2rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 5px;\n  padding-bottom: 5px; }\n:host button:hover {\n  cursor: pointer; }\n:host button:active {\n  box-shadow: none; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3Zpbml0L3NpZGUvcGlja3ktbXZwMS9zcmMvc3R5bGVzLnNjc3MiLCIvaG9tZS92aW5pdC9zaWRlL3BpY2t5LW12cDEvc3JjL2FwcC9tb2R1bGVzL3VpL2NsaWNrLWJ1dHRvbi9jbGljay1idXR0b24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsK0VBQStFO0FBUy9FO0VBQ0Usa0NBQWlDLEVBQ2xDO0FDVEQ7RUFFSSxZQUFXO0VBQ1gsYUFBWTtFQUNaLGtCQUFpQjtFQUNqQixZREphO0VDS2Isb0JBQW1CO0VBQ25CLG1CQUFrQjtFQUNsQixvQkFBbUI7RUFDbkIsaUJBQWdCO0VBQ2hCLG9CQUFtQixFQUNwQjtBQVhIO0VBYUksZ0JBQWUsRUFDaEI7QUFkSDtFQWdCSSxpQkFBZ0IsRUFDakIiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3VpL2NsaWNrLWJ1dHRvbi9jbGljay1idXR0b24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBZb3UgY2FuIGFkZCBnbG9iYWwgc3R5bGVzIHRvIHRoaXMgZmlsZSwgYW5kIGFsc28gaW1wb3J0IG90aGVyIHN0eWxlIGZpbGVzICovXG5cblxuJGNvbG9yV2hpdGU6ICNmZmY7XG4kcHJpbWFyeUNvbG9yOiAjMDA5Njg4O1xuJHByaW1hcnlMaWdodENvbG9yOiAjNTJjN2I4O1xuJHByaW1hcnlEYXJrQ29sb3I6ICMwMDY3NWI7XG5cblxuYm9keSB7XG4gIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbn1cbiIsIkBpbXBvcnQgXCIuLi8uLi8uLi8uLi9zdHlsZXMuc2Nzc1wiO1xuXG46aG9zdCB7XG4gIGJ1dHRvbiB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYm9yZGVyOiBub25lO1xuICAgIGZvbnQtc2l6ZTogMi4wcmVtO1xuICAgIGNvbG9yOiAkY29sb3JXaGl0ZTtcbiAgICBib3JkZXItcmFkaXVzOiAycmVtO1xuICAgIHBhZGRpbmctbGVmdDogMXJlbTtcbiAgICBwYWRkaW5nLXJpZ2h0OiAxcmVtO1xuICAgIHBhZGRpbmctdG9wOiA1cHg7XG4gICAgcGFkZGluZy1ib3R0b206IDVweDtcbiAgfVxuICBidXR0b246aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgfVxuICBidXR0b246YWN0aXZlIHtcbiAgICBib3gtc2hhZG93OiBub25lO1xuICB9XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -97,6 +97,7 @@ module.exports = "/* You can add global styles to this file, and also import oth
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClickButtonComponent", function() { return ClickButtonComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -107,12 +108,26 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ClickButtonComponent = /** @class */ (function () {
     function ClickButtonComponent() {
         this.buttonText = "click-button";
         this.didClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.isDisabled = this.isDisabled ? this.isDisabled : false;
+        this.boxShadow = "0.03rem 0.03rem 1px black";
+        this.bgColour = "#00675b";
     }
     ClickButtonComponent.prototype.didClickButton = function () {
+        var _this = this;
+        if (this.isDisabled)
+            return;
+        this.boxShadow = "0.00rem 0.0rem 0px black";
+        this.bgColour = "#004c40";
+        var s = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["timer"])(200).subscribe(function (e) {
+            _this.bgColour = "#00675b";
+            _this.boxShadow = "0.03rem 0.03rem 1px black";
+            s.unsubscribe();
+        });
         this.didClick.emit(true);
     };
     __decorate([
@@ -132,7 +147,8 @@ var ClickButtonComponent = /** @class */ (function () {
             selector: "click-button",
             template: __webpack_require__(/*! ./click-button.component.html */ "./src/app/modules/ui/click-button/click-button.component.html"),
             styles: [__webpack_require__(/*! ./click-button.component.scss */ "./src/app/modules/ui/click-button/click-button.component.scss")]
-        })
+        }),
+        __metadata("design:paramtypes", [])
     ], ClickButtonComponent);
     return ClickButtonComponent;
 }());
@@ -148,7 +164,7 @@ var ClickButtonComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"f1-ns f3 lh-solid\" >{{ headerText }}</div>\n"
+module.exports = "<div class=\"f1-ns f1 lh-solid\" >{{ headerText }}</div>\n"
 
 /***/ }),
 
@@ -213,7 +229,7 @@ var Header1Component = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"f2-ns f4 lh-solid\" >{{ headerText }}</div>\n"
+module.exports = "<div class=\"f2-ns f2 lh-solid\" >{{ headerText }}</div>\n"
 
 /***/ }),
 
@@ -278,7 +294,7 @@ var Header2Component = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"f3-ns f5 mv1 lh-solid\" >{{ headerText }}</div>\n"
+module.exports = "<div class=\"f3-ns f3 mv1 lh-solid\" >{{ headerText }}</div>\n"
 
 /***/ }),
 
@@ -330,6 +346,99 @@ var Header3Component = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], Header3Component);
     return Header3Component;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modules/ui/option-button/option-button.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/app/modules/ui/option-button/option-button.component.html ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button\n  (click)=\"didClickButton()\"\n  [ngStyle]=\"{\n    'background-color': isDisabled ? '#a4a4a4' : bgColour,\n    'box-shadow': boxShadow\n  }\"\n  (disabled)=\"isDisabled\">{{ buttonText }}</button>\n"
+
+/***/ }),
+
+/***/ "./src/app/modules/ui/option-button/option-button.component.scss":
+/*!***********************************************************************!*\
+  !*** ./src/app/modules/ui/option-button/option-button.component.scss ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  font-family: 'Roboto', sans-serif; }\n:host button {\n  width: 100%;\n  border: none;\n  font-size: 2.0rem;\n  color: black;\n  border-radius: 2rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 5px;\n  padding-bottom: 5px; }\n:host button:hover {\n  cursor: pointer; }\n:host button:active {\n  box-shadow: none; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3Zpbml0L3NpZGUvcGlja3ktbXZwMS9zcmMvc3R5bGVzLnNjc3MiLCIvaG9tZS92aW5pdC9zaWRlL3BpY2t5LW12cDEvc3JjL2FwcC9tb2R1bGVzL3VpL29wdGlvbi1idXR0b24vb3B0aW9uLWJ1dHRvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSwrRUFBK0U7QUFTL0U7RUFDRSxrQ0FBaUMsRUFDbEM7QUNURDtFQUVJLFlBQVc7RUFDWCxhQUFZO0VBQ1osa0JBQWlCO0VBQ2pCLGFBQVk7RUFDWixvQkFBbUI7RUFDbkIsbUJBQWtCO0VBQ2xCLG9CQUFtQjtFQUNuQixpQkFBZ0I7RUFDaEIsb0JBQW1CLEVBQ3BCO0FBWEg7RUFhSSxnQkFBZSxFQUNoQjtBQWRIO0VBZ0JJLGlCQUFnQixFQUNqQiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvdWkvb3B0aW9uLWJ1dHRvbi9vcHRpb24tYnV0dG9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuXG5cbiRjb2xvcldoaXRlOiAjZmZmO1xuJHByaW1hcnlDb2xvcjogIzAwOTY4ODtcbiRwcmltYXJ5TGlnaHRDb2xvcjogIzUyYzdiODtcbiRwcmltYXJ5RGFya0NvbG9yOiAjMDA2NzViO1xuXG5cbmJvZHkge1xuICBmb250LWZhbWlseTogJ1JvYm90bycsIHNhbnMtc2VyaWY7XG59XG4iLCJAaW1wb3J0IFwiLi4vLi4vLi4vLi4vc3R5bGVzLnNjc3NcIjtcblxuOmhvc3Qge1xuICBidXR0b24ge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBmb250LXNpemU6IDIuMHJlbTtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgYm9yZGVyLXJhZGl1czogMnJlbTtcbiAgICBwYWRkaW5nLWxlZnQ6IDFyZW07XG4gICAgcGFkZGluZy1yaWdodDogMXJlbTtcbiAgICBwYWRkaW5nLXRvcDogNXB4O1xuICAgIHBhZGRpbmctYm90dG9tOiA1cHg7XG4gIH1cbiAgYnV0dG9uOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gIH1cbiAgYnV0dG9uOmFjdGl2ZSB7XG4gICAgYm94LXNoYWRvdzogbm9uZTtcbiAgfVxufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/modules/ui/option-button/option-button.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/modules/ui/option-button/option-button.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: OptionButtonComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OptionButtonComponent", function() { return OptionButtonComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var OptionButtonComponent = /** @class */ (function () {
+    function OptionButtonComponent() {
+        this.buttonText = "option-button";
+        this.didClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.isDisabled = this.isDisabled ? this.isDisabled : false;
+        this.bgColour = "#4db6ac";
+        this.boxShadow = "0.03rem 0.03rem 1px black";
+    }
+    OptionButtonComponent.prototype.didClickButton = function () {
+        var _this = this;
+        if (this.isDisabled)
+            return;
+        this.boxShadow = "0.00rem 0.0rem 0px black";
+        this.bgColour = "#00867d";
+        var s = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["timer"])(300).subscribe(function (e) {
+            _this.bgColour = "#4db6ac";
+            _this.boxShadow = "0.03rem 0.03rem 1px black";
+            s.unsubscribe();
+        });
+        this.didClick.emit(true);
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('text'),
+        __metadata("design:type", String)
+    ], OptionButtonComponent.prototype, "buttonText", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('isDisabled'),
+        __metadata("design:type", Boolean)
+    ], OptionButtonComponent.prototype, "isDisabled", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])('didClick'),
+        __metadata("design:type", Object)
+    ], OptionButtonComponent.prototype, "didClick", void 0);
+    OptionButtonComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "option-button",
+            template: __webpack_require__(/*! ./option-button.component.html */ "./src/app/modules/ui/option-button/option-button.component.html"),
+            styles: [__webpack_require__(/*! ./option-button.component.scss */ "./src/app/modules/ui/option-button/option-button.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], OptionButtonComponent);
+    return OptionButtonComponent;
 }());
 
 
@@ -429,7 +538,7 @@ var TextfieldComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{ timeOnScreen }}</h1>\n<div class=\"w-100 h1 bg-white br-pill\">\n  <div [class]=\"(timeLeftProgress + ' w-56 h1 bg-black br-pill')\" id=\"timerProgress\"></div>\n</div>"
+module.exports = "<div class=\"w-100 h1 bg-white br-pill\">\n  <div [class]=\"(timeLeftProgress + ' w-56 h1 bg-black br-pill')\" id=\"timerProgress\"></div>\n</div>"
 
 /***/ }),
 
@@ -544,6 +653,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header1_header1_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./header1/header1.component */ "./src/app/modules/ui/header1/header1.component.ts");
 /* harmony import */ var _header2_header2_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./header2/header2.component */ "./src/app/modules/ui/header2/header2.component.ts");
 /* harmony import */ var _timer_timer_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./timer/timer.component */ "./src/app/modules/ui/timer/timer.component.ts");
+/* harmony import */ var _option_button_option_button_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./option-button/option-button.component */ "./src/app/modules/ui/option-button/option-button.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -560,12 +670,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var uiComponents = [
     _anchor_anchor_component__WEBPACK_IMPORTED_MODULE_0__["AnchorComponent"],
     _click_button_click_button_component__WEBPACK_IMPORTED_MODULE_1__["ClickButtonComponent"],
     _header1_header1_component__WEBPACK_IMPORTED_MODULE_7__["Header1Component"],
     _header2_header2_component__WEBPACK_IMPORTED_MODULE_8__["Header2Component"],
     _header3_header3_component__WEBPACK_IMPORTED_MODULE_2__["Header3Component"],
+    _option_button_option_button_component__WEBPACK_IMPORTED_MODULE_10__["OptionButtonComponent"],
     _textfield_textfield_component__WEBPACK_IMPORTED_MODULE_4__["TextfieldComponent"],
     _timer_timer_component__WEBPACK_IMPORTED_MODULE_9__["TimerComponent"]
 ];

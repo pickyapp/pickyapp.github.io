@@ -72,7 +72,7 @@ var GameSessionComponent = /** @class */ (function () {
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(function (params) { return _this.gsService.makeSession(params["gameSessionName"]); })).subscribe(function (resp) {
             _this.updateFromCookieSession();
             if (!_this.sCurrGameSession.isGameSessionFree) {
-                _this.router.navigate(['in-progress'], { relativeTo: _this.route });
+                _this.router.navigate(['in-progress'], { relativeTo: _this.route }); // temporary
             }
         });
         this.pollSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["interval"])(1000).pipe(// Polling for updates
@@ -156,7 +156,7 @@ var GameSessionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "YOU'RE IN GAME!\n<h1>Round: {{ round }}, {{ quesAnsString }}</h1>\n<h1>{{ this.isShowingAnswers ? \"ANSWER\" : \"QUESTION\"}}</h1>\n<h1>{{ currQuestion ? currQuestion.answerer : \"\" }}</h1>\n<h2>{{ currQuestion ? currQuestion.question.questionText : \"\" }}</h2>\n<div *ngIf=\"currQuestion\">\n  <div *ngFor=\"let option of currQuestion.question.options; index as i\">\n      <input [(ngModel)]=\"currOptionSelected\"\n            type=\"radio\"\n            [value]=\"i\"\n            (id)=\"i\"\n            (click)=\"setAnswerAs(i)\"\n            name=\"options\"\n            [disabled]=\"isShowingAnswers\">\n      <label (for)=\"i\">{{ currQuestion.question.options[i].optionText }}</label>\n      {{ currOptionSelected }}\n  </div>\n</div>\n<button *ngIf=\"isShowingAnswers\" (click)=\"onNext()\">next</button>\n<button (click)=\"showCookieValue('user')\">COOKIE</button>\n<button (click)=\"setStopTimerTrue()\">STOP</button>\n<timer #gameTimer [time]=\"5000\" (onTimerFinished)=\"onTimerFinished($event)\" ></timer>\n"
+module.exports = "<div class=\"mh3\">\n  <h1 class=\"white\">Round: {{ round }} of 5</h1>\n  <h1>{{ typeString === \"QUESTION\" ? typeString : \"\" }}</h1>\n  <div class=\"mb4\">\n    <h3 class=\"f3 white\">{{ currQuestion ? currQuestion.question.questionText : \"\" }}</h3>\n  </div>\n  <div *ngIf=\"currQuestion\">\n    <div *ngIf=\"!isShowingAnswers\">\n      <div class=\"mv4\" *ngFor=\"let option of currQuestion.question.options; index as i\">\n          <option-button\n                [text]=\"option.optionText\"\n                (didClick)=\"setAnswerAs(i)\"\n                [isDisabled]=\"isShowingAnswers\"></option-button>\n      </div>\n    </div>\n    <div *ngIf=\"isShowingAnswers\">\n        <h1>{{ typeString }}</h1>\n        <div class=\"mv5\">\n            <option-button\n                  [text]=\"currQuestion.question.options[currOptionSelected].optionText\"\n                  [isDisabled]=\"true\"></option-button>\n        </div>\n    </div>\n  </div>\n  <div class=\"mt4\" >\n      <timer #gameTimer [time]=\"5000\" (onTimerFinished)=\"onTimerFinished($event)\" ></timer>\n  </div>\n  <div class=\"mt4\">\n    <click-button *ngIf=\"isShowingAnswers\" [text]=\"'Next'\" (click)=\"onNext()\"></click-button>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -207,17 +207,21 @@ var InGameComponent = /** @class */ (function () {
         this.cookieService = cookieService;
         this.gsService = gsService;
         this.utilityService = utilityService;
-        this.QUESTION_VIEW_TIME = 45000;
+        this.QUESTION_VIEW_TIME = 450000;
         this.QUESTION_TIMER_TYPE = "question_timer";
-        this.ANSWER_VIEW_TIME = 45000;
+        this.ANSWER_VIEW_TIME = 450000;
         this.ANSWER_TIMER_TYPE = "answer_timer";
         this.TOTAL_ROUNDS = 5;
+        this.buddyName = "Himani";
         this.isShowingAnswers = false;
         this.setBuddyNameFromCookie();
         this.round = 0;
         this.currOptionSelected = 1;
     }
-    InGameComponent.prototype.ngOnInit = function () { this.isShowingAnswers = false; };
+    InGameComponent.prototype.ngOnInit = function () {
+        this.typeString = "QUESTION";
+        this.isShowingAnswers = false;
+    };
     InGameComponent.prototype.ngAfterViewInit = function () {
         this.startRound();
     };
@@ -228,11 +232,13 @@ var InGameComponent = /** @class */ (function () {
     };
     InGameComponent.prototype.startRound = function () {
         var _this = this;
-        this.gsService.getQuestion()
+        var s = this.gsService.getQuestion()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (resp) { return resp.body.message === "success"; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["take"])(1)).subscribe(function (resp) {
+            s.unsubscribe();
             _this.isShowingAnswers = false;
             _this.round++;
             _this.currQuestion = _this.getQuestionFromCookie(true);
+            _this.typeString = "QUESTION";
             _this.currTimerType = _this.QUESTION_TIMER_TYPE;
             _this.startTimer(_this.QUESTION_VIEW_TIME, _this.currTimerType);
         });
@@ -281,6 +287,7 @@ var InGameComponent = /** @class */ (function () {
     InGameComponent.prototype.onAnswerReceived = function (resp) {
         this.isShowingAnswers = true;
         var ques = this.getQuestionFromCookie(false);
+        this.typeString = this.buddyName + " says:";
         this.setAnswerAs(ques.answer);
         this.currQuestion = ques;
         this.currTimerType = this.ANSWER_TIMER_TYPE;
@@ -521,7 +528,7 @@ var UserService = /** @class */ (function () {
     }
     UserService.prototype.setUsername = function (username, gameSession) {
         // FIXME: fix getting empty gameSession string
-        var mkUserObs = this.httpClient.post(this.hostUrl + "/game-sessions/" + gameSession + "/add-user", {
+        var mkUserObs = this.httpClient.post("https://api.piky.me/game-sessions/" + gameSession + "/add-user", {
             username: username
         }, {
             observe: 'response',
