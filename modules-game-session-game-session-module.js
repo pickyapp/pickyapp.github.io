@@ -306,7 +306,7 @@ var InGameComponent = /** @class */ (function () {
     InGameComponent.prototype.pollForBuddyAnswer = function () {
         var _this = this;
         // TODO: maybe we can start a UI loading circle here or something?
-        var my_s = this.utilityService.getPoller(2000, function (e) { return _this.gsService.getBuddyAnswer(); }, function (resp) {
+        var my_s = this.utilityService.getPoller(1000, function (e) { return _this.gsService.getBuddyAnswer(); }, function (resp) {
             var question = _this.getQuestionFromCookie(false);
             return question && question.isAnswered;
         }).subscribe(function (resp) {
@@ -513,6 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -524,14 +525,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var UserService = /** @class */ (function () {
     function UserService(httpClient) {
         this.httpClient = httpClient;
-        this.hostUrl = 'https://api.piky.me';
+        this.hostUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl;
     }
     UserService.prototype.setUsername = function (username, gameSession) {
         // FIXME: fix getting empty gameSession string
-        var mkUserObs = this.httpClient.post("https://api.piky.me/game-sessions/" + gameSession + "/add-user", {
+        var mkUserObs = this.httpClient.post(this.hostUrl + "/game-sessions/" + gameSession + "/add-user", {
             username: username
         }, {
             observe: 'response',
