@@ -256,7 +256,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
 var environment = {
     production: true,
-    apiUrl: 'https://api.piky/me'
+    apiUrl: 'http://localhost:1234'
 };
 
 

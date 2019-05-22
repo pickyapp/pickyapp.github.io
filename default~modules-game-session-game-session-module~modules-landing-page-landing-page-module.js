@@ -538,7 +538,7 @@ var TextfieldComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"w-100 h1 bg-white br-pill\">\n  <div [class]=\"(timeLeftProgress + ' w-56 h1 bg-black br-pill')\" id=\"timerProgress\"></div>\n</div>"
+module.exports = "<div class=\"w-100 h1 bg-white br-pill\">\n  <div [class]=\"(' w-56 h1 bg-black br-pill')\" id=\"timerProgress\"></div>\n</div>"
 
 /***/ }),
 
