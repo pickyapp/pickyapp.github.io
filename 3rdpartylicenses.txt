@@ -269,6 +269,9 @@ MIT
 @angular/platform-browser
 MIT
 
+ngx-spinner
+MIT
+
 ngx-cookie-service
 MIT
 
